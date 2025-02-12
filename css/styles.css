@@ -73,7 +73,7 @@ i {
 
 .main-image {
   height: 400px;
-  background-image: url("../img/g_1.jpg");
+  background-image: url("../img/g_1.png");
   margin-bottom: 30px;
   position: relative;
 }
@@ -89,23 +89,31 @@ i {
 /* Gallery */
 
 #img2 {
-  background-image: url("../img/g_2.jpg");
+  background-image: url("../img/g_2.png");
 }
 
 #img3 {
-  background-image: url("../img/g_3.jpg");
+  background-image: url("../img/g_3.png");
 }
 
 #img4 {
-  background-image: url("../img/g_4.jpg");
+  background-image: url("../img/g_4.png");
 }
 
 #img5 {
-  background-image: url("../img/g_5.jpg");
+  background-image: url("../img/g_5.png");
 }
 
 #img6 {
-  background-image: url("../img/g_6.jpg");
+  background-image: url("../img/g_6.png");
+}
+
+#img7 {
+  background-image: url("../img/g_7.png");
+}
+
+#img8 {
+  background-image: url("../img/g_8.png");
 }
 
 #gallery-container h1,
