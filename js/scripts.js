@@ -17,3 +17,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener("resize", toggleNavigation);
 });
+
+document.addEventListener("alpine:init", () => {
+  Alpine.data("dropdown", () => ({
+    open: false,
+    toggle() {
+      this.open = !this.open;
+    },
+    close() {
+      this.open = false;
+    },
+  }));
+});

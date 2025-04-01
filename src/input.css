@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+/* Estilos gerais */
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.projects {
+  width: 350px;
+  height: 350px;
+  margin: 0 auto;
+  border-radius: 1rem;
+  background-position: center;
+  background-size: cover;
+}
+
+.project__1 {
+  background-image: url('../assets/g_1.png')
+}
+.project__2 {
+  background-image: url('../assets/g_2.png')
+}
+.project__3 {
+  background-image: url('../assets/g_3.png')
+}
