@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+/* npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch */
+
 /* Estilos gerais */
 * {
   box-sizing: border-box;
@@ -16,11 +18,11 @@
 }
 
 .project__1 {
-  background-image: url('../assets/g_1.png')
+  background-image: url("../assets/g_1.png");
 }
 .project__2 {
-  background-image: url('../assets/g_2.png')
+  background-image: url("../assets/g_2.png");
 }
 .project__3 {
-  background-image: url('../assets/g_3.png')
+  background-image: url("../assets/g_3.png");
 }

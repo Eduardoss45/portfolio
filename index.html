@@ -22,7 +22,7 @@
     <script src="./js/scripts.js" defer></script>
     <title>My Portfolio</title>
   </head>
-  <body class="container mx-auto p-8">
+  <body class="container mx-auto p-8 lg:p-32">
     <nav id="desktop" class="flex justify-between mb-20">
       <h1 class="font-light text-4xl">Eduardo Souza</h1>
       <ul class="flex row gap-6">
@@ -65,9 +65,12 @@
       </div>
     </nav>
 
-    <section id="profile" class="flex items-center flex-col my-16">
+    <section
+      id="profile"
+      class="flex items-center flex-col my-16 lg:flex-row justify-center gap-12"
+    >
       <img
-        src="./assets/profile_1.jpg"
+        src="./assets/profile_1.png"
         class="rounded-2xl w-80 shadow-lg"
         lt="Eduardo Souza"
       />
@@ -82,16 +85,20 @@
             >Download CV</a
           >
           <a
-            href="#"
+            href="mailto:santos934510@gmail.com?subject=Contato%20Portfólio&body=Olá%20Eduardo,%20gostaria%20de%20entrar%20em%20contato."
             class="py-2 px-6 ml-1 rounded-4xl mb-6 text-white bg-black"
-            >Contact Info</a
           >
+            Contact Info
+          </a>
         </nav>
         <nav class="my-2 text-center">
-          <a href="#" class="m-3"
+          <a href="https://github.com/Eduardoss45" target="_blank" class="m-3"
             ><i class="text-black text-4xl bi bi-github"></i
           ></a>
-          <a href="#" class="m-3"
+          <a
+            href="https://www.linkedin.com/in/eduardo-souza432"
+            target="_blank"
+            class="m-3"
             ><i class="text-black text-4xl bi bi-linkedin"></i
           ></a>
         </nav>
@@ -101,184 +108,219 @@
     <section id="about" class="text-center my-16 text-zinc-600">
       <p>Get To Know More</p>
       <h1 class="font-medium text-4xl text-black py-3">About Me</h1>
-      <div class="my-4 border border-zinc-300 rounded-2xl p-8 bg-zinc-50">
-        <i class="text-3xl text-black bi bi-award"></i>
-        <h3 class="text-2xl text-black font-bold pb-2">Experience</h3>
-        <p class="pt-2">4 years <br />Full-stack Development</p>
+      <div class="md:flex">
+        <div class="md:flex flex-col">
+          <div class="md:flex gap-12">
+            <div
+              class="my-4 w-full border border-zinc-300 rounded-2xl p-8 bg-zinc-50"
+            >
+              <i class="text-3xl text-black bi bi-award"></i>
+              <h3 class="text-2xl text-black font-bold pb-2">Experience</h3>
+              <p class="pt-2">4 years <br />Full-stack Development</p>
+            </div>
+            <div
+              class="my-4 w-full text-center border border-zinc-300 rounded-2xl p-8 bg-zinc-50"
+            >
+              <i class="text-3xl text-black bi bi-book-half"></i>
+              <h3 class="text-2xl text-black font-bold pb-2">Education</h3>
+              <p class="pt-2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+                dicta similique, enim exercitationem ipsam nemo, omnis corrupti
+                dolorem vero asperiores dignissimos commodi eveniet rem. Porro
+                dignissimos dicta ratione odio recusandae!
+              </p>
+            </div>
+          </div>
+          <p class="text-justify pb-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nemo
+            ipsa quasi accusamus, quisquam quam dicta vel tempore possimus
+            corporis nobis non voluptatibus nisi praesentium ea? Optio facilis
+            asperiores quam? Molestias perferendis natus obcaecati tenetur
+            commodi cupiditate quam id possimus et ab, modi impedit ducimus
+            vitae earum. Numquam dolores id voluptatum corrupti, laboriosam
+            soluta, quae et tenetur fuga nihil totam?
+          </p>
+        </div>
       </div>
-      <div
-        class="my-4 text-center border border-zinc-300 rounded-2xl p-8 bg-zinc-50"
-      >
-        <i class="text-3xl text-black bi bi-book-half"></i>
-        <h3 class="text-2xl text-black font-bold pb-2">Education</h3>
-        <p class="pt-2">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt iste
-          amet, cumque quam temporibus porro dolores laboriosam exercitationem
-          odio libero molestias eius? Dolor ad architecto blanditiis earum
-          magnam facilis vel.
-        </p>
-      </div>
-      <p class="text-justify pb-4">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nemo ipsa
-        quasi accusamus, quisquam quam dicta vel tempore possimus corporis nobis
-        non voluptatibus nisi praesentium ea? Optio facilis asperiores quam?
-        Molestias perferendis natus obcaecati tenetur commodi cupiditate quam id
-        possimus et ab, modi impedit ducimus vitae earum. Numquam dolores id
-        voluptatum corrupti, laboriosam soluta, quae et tenetur fuga nihil
-        totam?
-      </p>
     </section>
 
     <section id="experience" class="text-center my-16 text-zinc-600">
       <p>Explore My</p>
       <h1 class="font-medium text-4xl text-black py-3">Experience</h1>
-      <div class="border rounded-2xl my-3 py-12 bg-zinc-50 border-zinc-300">
-        <h2 class="text-2xl font-bold pb-2 text-black">
-          Front-end Development
-        </h2>
-        <ul>
+      <div class="lg:flex gap-12">
+        <div
+          class="border rounded-2xl my-3 py-12 bg-zinc-50 border-zinc-300 md:w-full"
+        >
+          <h2 class="text-2xl font-bold pb-2 text-black">
+            Front-end Development
+          </h2>
+          <ul>
+            <div class="flex pl-7 items-center gap-3">
+              <span><i class="text-black bi bi-bookmark-check-fill"></i></span>
+              <h3 class="text-black text-xl font-extralight">HTML</h3>
+            </div>
+            <p class="text-xs font-bold text-left pl-7">Experienced</p>
+            <div class="flex pl-7 items-center gap-3">
+              <span><i class="text-black bi bi-bookmark-check-fill"></i></span>
+              <h3 class="text-black text-xl font-extralight">CSS</h3>
+            </div>
+            <p class="text-xs font-bold text-left pl-7">Experienced</p>
+            <div class="flex pl-7 items-center gap-3">
+              <span><i class="text-black bi bi-bookmark-check-fill"></i></span>
+              <h3 class="text-black text-xl font-extralight">React</h3>
+            </div>
+            <p class="text-xs font-bold text-left pl-7">Intermediate</p>
+            <div class="flex pl-7 items-center gap-3">
+              <span><i class="text-black bi bi-bookmark-check-fill"></i></span>
+              <h3 class="text-black text-xl font-extralight">JavaScript</h3>
+            </div>
+            <p class="text-xs font-bold text-left pl-7">Experienced</p>
+            <div class="flex pl-7 items-center gap-3">
+              <span><i class="text-black bi bi-bookmark-check-fill"></i></span>
+              <h3 class="text-black text-xl font-extralight">Bootstrap</h3>
+            </div>
+            <p class="text-xs font-bold text-left pl-7">Experienced</p>
+            <div class="flex pl-7 items-center gap-3">
+              <span><i class="text-black bi bi-bookmark-check-fill"></i></span>
+              <h3 class="text-black text-xl font-extralight">Angular</h3>
+            </div>
+            <p class="text-xs font-bold text-left pl-7">Experienced</p>
+            <div class="flex pl-7 items-center gap-3">
+              <span><i class="text-black bi bi-bookmark-check-fill"></i></span>
+              <h3 class="text-black text-xl font-extralight">TypeScript</h3>
+            </div>
+            <p class="text-xs font-bold text-left pl-7">Intermediate</p>
+            <div class="flex pl-7 items-center gap-3">
+              <span><i class="text-black bi bi-bookmark-check-fill"></i></span>
+              <h3 class="text-black text-xl font-extralight">Vue.js</h3>
+            </div>
+            <p class="text-xs font-bold text-left pl-7">Intermediate</p>
+          </ul>
+        </div>
+        <div
+          class="border rounded-2xl my-3 py-12 bg-zinc-50 border-zinc-300 md:w-full"
+        >
+          <h2 class="text-2xl font-bold pb-2 text-black">
+            Back-end Development
+          </h2>
           <div class="flex pl-7 items-center gap-3">
             <span><i class="text-black bi bi-bookmark-check-fill"></i></span>
-            <h3 class="text-black text-xl font-extralight">HTML</h3>
+            <h3 class="text-black text-xl font-extralight">Node.js</h3>
           </div>
           <p class="text-xs font-bold text-left pl-7">Experienced</p>
           <div class="flex pl-7 items-center gap-3">
             <span><i class="text-black bi bi-bookmark-check-fill"></i></span>
-            <h3 class="text-black text-xl font-extralight">CSS</h3>
-          </div>
-          <p class="text-xs font-bold text-left pl-7">Experienced</p>
-          <div class="flex pl-7 items-center gap-3">
-            <span><i class="text-black bi bi-bookmark-check-fill"></i></span>
-            <h3 class="text-black text-xl font-extralight">React</h3>
-          </div>
-          <p class="text-xs font-bold text-left pl-7">Intermediate</p>
-          <div class="flex pl-7 items-center gap-3">
-            <span><i class="text-black bi bi-bookmark-check-fill"></i></span>
-            <h3 class="text-black text-xl font-extralight">JavaScript</h3>
-          </div>
-          <p class="text-xs font-bold text-left pl-7">Experienced</p>
-          <div class="flex pl-7 items-center gap-3">
-            <span><i class="text-black bi bi-bookmark-check-fill"></i></span>
-            <h3 class="text-black text-xl font-extralight">Bootstrap</h3>
-          </div>
-          <p class="text-xs font-bold text-left pl-7">Experienced</p>
-          <div class="flex pl-7 items-center gap-3">
-            <span><i class="text-black bi bi-bookmark-check-fill"></i></span>
-            <h3 class="text-black text-xl font-extralight">Angular</h3>
+            <h3 class="text-black text-xl font-extralight">Express.js</h3>
           </div>
           <p class="text-xs font-bold text-left pl-7">Experienced</p>
           <div class="flex pl-7 items-center gap-3">
             <span><i class="text-black bi bi-bookmark-check-fill"></i></span>
             <h3 class="text-black text-xl font-extralight">TypeScript</h3>
           </div>
+          <p class="text-xs font-bold text-left pl-7">Intermediate</p>
+          <div class="flex pl-7 items-center gap-3">
+            <span><i class="text-black bi bi-bookmark-check-fill"></i></span>
+            <h3 class="text-black text-xl font-extralight">
+              JWT Authentication
+            </h3>
+          </div>
+          <p class="text-xs font-bold text-left pl-7">Experienced</p>
+          <div class="flex pl-7 items-center gap-3">
+            <span><i class="text-black bi bi-bookmark-check-fill"></i></span>
+            <h3 class="text-black text-xl font-extralight">
+              MongoDB & Mongoose
+            </h3>
+          </div>
+          <p class="text-xs font-bold text-left pl-7">Experienced</p>
+          <div class="flex pl-7 items-center gap-3">
+            <span><i class="text-black bi bi-bookmark-check-fill"></i></span>
+            <h3 class="text-black text-xl font-extralight">
+              MySQL & Sequelize
+            </h3>
+          </div>
+          <p class="text-xs font-bold text-left pl-7">Experienced</p>
+          <div class="flex pl-7 items-center gap-3">
+            <span><i class="text-black bi bi-bookmark-check-fill"></i></span>
+            <h3 class="text-black text-xl font-extralight">PostgreSQL</h3>
+          </div>
+          <p class="text-xs font-bold text-left pl-7">Intermediate</p>
+          <div class="flex pl-7 items-center gap-3">
+            <span><i class="text-black bi bi-bookmark-check-fill"></i></span>
+            <h3 class="text-black text-xl font-extralight">NestJS</h3>
+          </div>
           <p class="text-xs font-bold text-left pl-7">Basic</p>
           <div class="flex pl-7 items-center gap-3">
             <span><i class="text-black bi bi-bookmark-check-fill"></i></span>
-            <h3 class="text-black text-xl font-extralight">Vue.js</h3>
+            <h3 class="text-black text-xl font-extralight">Security</h3>
           </div>
-          <p class="text-xs font-bold text-left pl-7">Intermediate</p>
-        </ul>
-      </div>
-      <div class="border rounded-2xl my-3 py-12 bg-zinc-50 border-zinc-300">
-        <h2 class="text-2xl font-bold pb-2 text-black">Back-end Development</h2>
-        <div class="flex pl-7 items-center gap-3">
-          <span><i class="text-black bi bi-bookmark-check-fill"></i></span>
-          <h3 class="text-black text-xl font-extralight">Node.js</h3>
+          <p class="text-xs font-bold text-left pl-7">Learning</p>
         </div>
-        <p class="text-xs font-bold text-left pl-7">Experienced</p>
-        <div class="flex pl-7 items-center gap-3">
-          <span><i class="text-black bi bi-bookmark-check-fill"></i></span>
-          <h3 class="text-black text-xl font-extralight">Express.js</h3>
-        </div>
-        <p class="text-xs font-bold text-left pl-7">Experienced</p>
-        <div class="flex pl-7 items-center gap-3">
-          <span><i class="text-black bi bi-bookmark-check-fill"></i></span>
-          <h3 class="text-black text-xl font-extralight">TypeScript</h3>
-        </div>
-        <p class="text-xs font-bold text-left pl-7">Experienced</p>
-        <div class="flex pl-7 items-center gap-3">
-          <span><i class="text-black bi bi-bookmark-check-fill"></i></span>
-          <h3 class="text-black text-xl font-extralight">JWT Authentication</h3>
-        </div>
-        <p class="text-xs font-bold text-left pl-7">Experienced</p>
-        <div class="flex pl-7 items-center gap-3">
-          <span><i class="text-black bi bi-bookmark-check-fill"></i></span>
-          <h3 class="text-black text-xl font-extralight">MongoDB & Mongoose</h3>
-        </div>
-        <p class="text-xs font-bold text-left pl-7">Experienced</p>
-        <div class="flex pl-7 items-center gap-3">
-          <span><i class="text-black bi bi-bookmark-check-fill"></i></span>
-          <h3 class="text-black text-xl font-extralight">MySQL & Sequelize</h3>
-        </div>
-        <p class="text-xs font-bold text-left pl-7">Experienced</p>
-        <div class="flex pl-7 items-center gap-3">
-          <span><i class="text-black bi bi-bookmark-check-fill"></i></span>
-          <h3 class="text-black text-xl font-extralight">PostgreSQL</h3>
-        </div>
-        <p class="text-xs font-bold text-left pl-7">Intermediate</p>
-        <div class="flex pl-7 items-center gap-3">
-          <span><i class="text-black bi bi-bookmark-check-fill"></i></span>
-          <h3 class="text-black text-xl font-extralight">NestJS</h3>
-        </div>
-        <p class="text-xs font-bold text-left pl-7">Basic (General Overview)</p>
-        <div class="flex pl-7 items-center gap-3">
-          <span><i class="text-black bi bi-bookmark-check-fill"></i></span>
-          <h3 class="text-black text-xl font-extralight">Security</h3>
-        </div>
-        <p class="text-xs font-bold text-left pl-7">Learning</p>
       </div>
     </section>
 
     <section id="projects" class="text-center my-16 text-zinc-600">
       <p>Browse My Recent</p>
       <h1 class="font-medium text-4xl text-black py-3">Projects</h1>
-      <div class="border border-zinc-300 my-3 py-1 rounded-2xl bg-zinc-50">
-        <div class="projects project__1"></div>
-        <h2 class="text-2xl font-bold py-3">Project One</h2>
-        <button
-          class="border py-2 px-6 mr-1 rounded-4xl mb-6 text-white bg-black"
-          onclick="location.href=''"
+      <div class="lg:flex justify-center">
+        <div
+          class="border border-zinc-300 my-3 py-1 rounded-2xl bg-zinc-50 lg:p-4"
         >
-          Github
-        </button>
-        <button
-          class="border py-2 px-6 ml-1 rounded-4xl mb-6 text-white bg-black"
-          onclick="location.href=''"
-        >
-          Live Demo
-        </button>
+          <!-- ! Colocar um projeto fullstack aqui -->
+          <div class="projects project__1"></div>
+          <h2 class="text-2xl font-bold py-3">Project One</h2>
+          <button
+            class="border py-2 px-6 mr-1 rounded-4xl mb-6 text-white bg-black"
+            onclick="location.href=''"
+          >
+            Github
+          </button>
+          <button
+            class="border py-2 px-6 ml-1 rounded-4xl mb-6 text-white bg-black"
+            onclick="location.href=''"
+          >
+            Live Demo
+          </button>
+        </div>
       </div>
-      <div class="border border-zinc-300 my-3 py-1 rounded-2xl bg-zinc-50">
-        <div class="projects project__2"></div>
-        <h2 class="text-2xl font-bold py-3">Project Two</h2>
-        <button
-          class="border py-2 px-6 mr-1 rounded-4xl mb-6 text-white bg-black"
-          onclick="location.href=''"
+      <div class="lg:flex gap-12 justify-center md:w-full">
+        <div
+          class="border border-zinc-300 my-3 py-1 rounded-2xl bg-zinc-50 lg:p-4"
         >
-          Github
-        </button>
-        <button
-          class="border py-2 px-6 ml-1 rounded-4xl mb-6 text-white bg-black"
-          onclick="location.href=''"
+          <!-- ! Colocar um projeto backend aqui -->
+          <div class="projects project__2"></div>
+          <h2 class="text-2xl font-bold py-3">Project Two</h2>
+          <button
+            class="border py-2 px-6 mr-1 rounded-4xl mb-6 text-white bg-black"
+            onclick="location.href=''"
+          >
+            Github
+          </button>
+          <button
+            class="border py-2 px-6 ml-1 rounded-4xl mb-6 text-white bg-black"
+            onclick="location.href=''"
+          >
+            Live Demo
+          </button>
+        </div>
+        <div
+          class="border border-zinc-300 my-3 py-1 rounded-2xl bg-zinc-50 lg:p-4"
         >
-          Live Demo
-        </button>
-      </div>
-      <div class="border border-zinc-300 my-3 py-1 rounded-2xl bg-zinc-50">
-        <div class="projects project__3"></div>
-        <h2 class="text-2xl font-bold py-3">Project Three</h2>
-        <button
-          class="border py-2 px-6 mr-1 rounded-4xl mb-6 text-white bg-black"
-          onclick="location.href=''"
-        >
-          Github
-        </button>
-        <button
-          class="border py-2 px-6 ml-1 rounded-4xl mb-6 text-white bg-black"
-          onclick="location.href=''"
-        >
-          Live Demo
-        </button>
+          <!-- ! Colocar um projeto frontend aqui -->
+          <div class="projects project__3"></div>
+          <h2 class="text-2xl font-bold py-3">Project Three</h2>
+          <button
+            class="border py-2 px-6 mr-1 rounded-4xl mb-6 text-white bg-black"
+            onclick="location.href=''"
+          >
+            Github
+          </button>
+          <button
+            class="border py-2 px-6 ml-1 rounded-4xl mb-6 text-white bg-black"
+            onclick="location.href=''"
+          >
+            Live Demo
+          </button>
+        </div>
       </div>
     </section>
 
@@ -334,7 +376,7 @@
           >
         </li>
       </ul>
-      <p>Copyright © 2023 Eduardo Souza. All Rights Reserved.</p>
+      <p>Copyright © 2025 Eduardo Souza. All Rights Reserved.</p>
     </footer>
   </body>
 </html>
