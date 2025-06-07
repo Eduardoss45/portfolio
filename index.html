@@ -13,54 +13,46 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
-    ></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <link href="./src/output.css" rel="stylesheet" />
     <script src="./js/scripts.js" defer></script>
-    <title>My Portfolio</title>
+    <title>Eduardo Souza</title>
   </head>
   <body class="container mx-auto p-8 lg:p-32">
-    <nav id="desktop" class="flex justify-between mb-20">
-      <h1 class="font-light text-4xl">Eduardo Souza</h1>
-      <ul class="flex row gap-6">
-        <li><a class="font-extralight text-2xl" href="#about">About</a></li>
-        <li>
-          <a class="font-extralight text-2xl" href="#experience">Experience</a>
-        </li>
-        <li>
-          <a class="font-extralight text-2xl" href="#projects">Projects</a>
-        </li>
-        <li><a class="font-extralight text-2xl" href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <nav class="flex justify-between items-center mb-20">
+      <h1 class="text-4xl py-3 font-light md:font-bold">Eduardo Souza</h1>
 
-    <nav id="mobile" class="flex justify-between my-8 items-center">
-      <h1 class="font-bold text-4xl text-black py-3">Eduardo Souza</h1>
-      <div x-data="{ open: false }" class="relative inline-block text-left">
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex gap-6">
+        <li><a class="font-extralight text-2xl" href="#about">Sobre mim</a></li>
+        <li><a class="font-extralight text-2xl" href="#experience">Experiência</a></li>
+        <li><a class="font-extralight text-2xl" href="#projects">Projetos</a></li>
+        <li><a class="font-extralight text-2xl" href="#contact">Contato</a></li>
+      </ul>
+
+      <!-- Mobile Menu -->
+      <div x-data="{ open: false }" class="md:hidden relative">
         <button
           @click="open = !open"
           class="bg-black text-white px-4 py-2 rounded"
+          :aria-expanded="open.toString()"
+          aria-label="Abrir menu de navegação"
         >
-          <i class="text-white bi bi-list"></i>
+          <i class="bi bi-list text-white"></i>
         </button>
         <div
           x-show="open"
+          role="menu"
+          aria-label="Links de navegação"
           @click.outside="open = false"
           class="absolute mt-2 right-0 w-48 bg-white border border-gray-300 rounded shadow-lg"
+          x-transition
         >
-          <a class="block px-4 py-2 hover:bg-gray-100" href="#about">About</a>
-          <a class="block px-4 py-2 hover:bg-gray-100" href="#experience"
-            >Experience</a
-          >
-          <a class="block px-4 py-2 hover:bg-gray-100" href="#projects"
-            >Projects</a
-          >
-          <a class="block px-4 py-2 hover:bg-gray-100" href="#contact"
-            >Contact</a
-          >
+          <a class="block px-4 py-2 hover:bg-gray-100" href="#about">Sobre mim</a>
+          <a class="block px-4 py-2 hover:bg-gray-100" href="#experience">Experiência</a>
+          <a class="block px-4 py-2 hover:bg-gray-100" href="#projects">Projetos</a>
+          <a class="block px-4 py-2 hover:bg-gray-100" href="#contact">Contato</a>
         </div>
       </div>
     </nav>
@@ -69,36 +61,27 @@
       id="profile"
       class="flex items-center flex-col my-16 lg:flex-row justify-center gap-12"
     >
-      <img
-        src="./assets/profile_1.png"
-        class="rounded-2xl w-80 shadow-lg"
-        lt="Eduardo Souza"
-      />
+      <img src="./assets/profile_1.png" class="rounded-2xl w-80 shadow-lg" alt="Eduardo Souza" />
       <div class="py-8 text-zinc-600 text-center">
-        <p>Hello, I'm</p>
+        <p>Olá, eu sou</p>
         <h1 class="font-medium text-4xl text-black py-3">Eduardo Souza</h1>
-        <p>Fullstack Developer</p>
+        <p>Desenvolvedor Full-Stack</p>
         <nav class="my-5">
-          <a
-            href="#"
-            class="py-2 px-6 mr-1 rounded-4xl mb-6 text-white bg-black"
-            >Download CV</a
+          <a href="#" class="py-2 px-6 mr-1 rounded-4xl mb-6 text-white bg-black"
+            >Baixar Currículo</a
           >
           <a
             href="mailto:santos934510@gmail.com?subject=Contato%20Portfólio&body=Olá%20Eduardo,%20gostaria%20de%20entrar%20em%20contato."
             class="py-2 px-6 ml-1 rounded-4xl mb-6 text-white bg-black"
           >
-            Contact Info
+            Informações de Contato
           </a>
         </nav>
         <nav class="my-2 text-center">
           <a href="https://github.com/Eduardoss45" target="_blank" class="m-3"
             ><i class="text-black text-4xl bi bi-github"></i
           ></a>
-          <a
-            href="https://www.linkedin.com/in/eduardo-souza432"
-            target="_blank"
-            class="m-3"
+          <a href="https://www.linkedin.com/in/eduardo-souza432" target="_blank" class="m-3"
             ><i class="text-black text-4xl bi bi-linkedin"></i
           ></a>
         </nav>
@@ -106,165 +89,146 @@
     </section>
 
     <section id="about" class="text-center my-16 text-zinc-600">
-      <p>Get To Know More</p>
-      <h1 class="font-medium text-4xl text-black py-3">About Me</h1>
+      <p>Saiba Mais</p>
+      <h1 class="font-medium text-4xl text-black py-3">Sobre mim</h1>
       <div class="md:flex">
         <div class="md:flex flex-col">
           <div class="md:flex gap-12">
-            <div
-              class="my-4 w-full border border-zinc-300 rounded-2xl p-8 bg-zinc-50"
-            >
+            <div class="my-4 w-full border border-zinc-300 rounded-2xl p-8 bg-zinc-50">
               <i class="text-3xl text-black bi bi-award"></i>
-              <h3 class="text-2xl text-black font-bold pb-2">Experience</h3>
-              <p class="pt-2">4 years <br />Full-stack Development</p>
-            </div>
-            <div
-              class="my-4 w-full text-center border border-zinc-300 rounded-2xl p-8 bg-zinc-50"
-            >
-              <i class="text-3xl text-black bi bi-book-half"></i>
-              <h3 class="text-2xl text-black font-bold pb-2">Education</h3>
+              <h3 class="text-2xl text-black font-bold pb-2">Experiência</h3>
               <p class="pt-2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-                dicta similique, enim exercitationem ipsam nemo, omnis corrupti
-                dolorem vero asperiores dignissimos commodi eveniet rem. Porro
-                dignissimos dicta ratione odio recusandae!
+                Atuo há 4 anos com desenvolvimento web full stack, utilizando JavaScript no backend
+                e frontend para construção de aplicações modernas e escaláveis.
+              </p>
+            </div>
+            <div class="my-4 w-full text-center border border-zinc-300 rounded-2xl p-8 bg-zinc-50">
+              <i class="text-3xl text-black bi bi-book-half"></i>
+              <h3 class="text-2xl text-black font-bold pb-2">Educação</h3>
+              <p class="pt-2">
+                Cursando o último ano do curso técnico em Desenvolvimento de Sistemas na ETEC, com
+                foco em análise, modelagem, programação e manutenção de sistemas web. Tenho
+                experiência prática em projetos que envolvem construção de APIs, modelagem de banco
+                de dados e desenvolvimento full stack com JavaScript.
               </p>
             </div>
           </div>
           <p class="text-justify pb-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nemo
-            ipsa quasi accusamus, quisquam quam dicta vel tempore possimus
-            corporis nobis non voluptatibus nisi praesentium ea? Optio facilis
-            asperiores quam? Molestias perferendis natus obcaecati tenetur
-            commodi cupiditate quam id possimus et ab, modi impedit ducimus
-            vitae earum. Numquam dolores id voluptatum corrupti, laboriosam
-            soluta, quae et tenetur fuga nihil totam?
+            Pretendo dar continuidade à minha formação acadêmica cursando Engenharia de Software,
+            aprofundando conhecimentos em arquitetura de sistemas, engenharia de requisitos e boas
+            práticas de desenvolvimento em escala.
           </p>
         </div>
       </div>
     </section>
 
     <section id="experience" class="text-center my-16 text-zinc-600">
-      <p>Explore My</p>
-      <h1 class="font-medium text-4xl text-black py-3">Experience</h1>
+      <p>Explore minha</p>
+      <h1 class="font-medium text-4xl text-black py-3">Experiência</h1>
       <div class="lg:flex gap-12">
-        <div
-          class="border rounded-2xl my-3 py-12 bg-zinc-50 border-zinc-300 md:w-full"
-        >
-          <h2 class="text-2xl font-bold pb-2 text-black">
-            Front-end Development
-          </h2>
+        <div class="border rounded-2xl my-3 py-12 bg-zinc-50 border-zinc-300 md:w-full">
+          <h2 class="text-2xl font-bold pb-2 text-black">Desenvolvimento Front-end</h2>
           <ul>
             <div class="flex pl-7 items-center gap-3">
               <span><i class="text-black bi bi-bookmark-check-fill"></i></span>
               <h3 class="text-black text-xl font-extralight">HTML</h3>
             </div>
-            <p class="text-xs font-bold text-left pl-7">Experienced</p>
+            <p class="text-xs font-bold text-left pl-7">Experiente</p>
             <div class="flex pl-7 items-center gap-3">
               <span><i class="text-black bi bi-bookmark-check-fill"></i></span>
               <h3 class="text-black text-xl font-extralight">CSS</h3>
             </div>
-            <p class="text-xs font-bold text-left pl-7">Experienced</p>
+            <p class="text-xs font-bold text-left pl-7">Experiente</p>
             <div class="flex pl-7 items-center gap-3">
               <span><i class="text-black bi bi-bookmark-check-fill"></i></span>
               <h3 class="text-black text-xl font-extralight">React</h3>
             </div>
-            <p class="text-xs font-bold text-left pl-7">Intermediate</p>
+            <p class="text-xs font-bold text-left pl-7">Intermediário</p>
             <div class="flex pl-7 items-center gap-3">
               <span><i class="text-black bi bi-bookmark-check-fill"></i></span>
               <h3 class="text-black text-xl font-extralight">JavaScript</h3>
             </div>
-            <p class="text-xs font-bold text-left pl-7">Experienced</p>
+            <p class="text-xs font-bold text-left pl-7">Experiente</p>
             <div class="flex pl-7 items-center gap-3">
               <span><i class="text-black bi bi-bookmark-check-fill"></i></span>
               <h3 class="text-black text-xl font-extralight">Bootstrap</h3>
             </div>
-            <p class="text-xs font-bold text-left pl-7">Experienced</p>
+            <p class="text-xs font-bold text-left pl-7">Experiente</p>
             <div class="flex pl-7 items-center gap-3">
               <span><i class="text-black bi bi-bookmark-check-fill"></i></span>
               <h3 class="text-black text-xl font-extralight">Angular</h3>
             </div>
-            <p class="text-xs font-bold text-left pl-7">Experienced</p>
+            <p class="text-xs font-bold text-left pl-7">Experiente</p>
             <div class="flex pl-7 items-center gap-3">
               <span><i class="text-black bi bi-bookmark-check-fill"></i></span>
               <h3 class="text-black text-xl font-extralight">TypeScript</h3>
             </div>
-            <p class="text-xs font-bold text-left pl-7">Intermediate</p>
+            <p class="text-xs font-bold text-left pl-7">Intermediário</p>
             <div class="flex pl-7 items-center gap-3">
               <span><i class="text-black bi bi-bookmark-check-fill"></i></span>
               <h3 class="text-black text-xl font-extralight">Vue.js</h3>
             </div>
-            <p class="text-xs font-bold text-left pl-7">Intermediate</p>
+            <p class="text-xs font-bold text-left pl-7">Intermediário</p>
           </ul>
         </div>
-        <div
-          class="border rounded-2xl my-3 py-12 bg-zinc-50 border-zinc-300 md:w-full"
-        >
-          <h2 class="text-2xl font-bold pb-2 text-black">
-            Back-end Development
-          </h2>
+        <div class="border rounded-2xl my-3 py-12 bg-zinc-50 border-zinc-300 md:w-full">
+          <h2 class="text-2xl font-bold pb-2 text-black">Desenvolvimento Back-end</h2>
           <div class="flex pl-7 items-center gap-3">
             <span><i class="text-black bi bi-bookmark-check-fill"></i></span>
             <h3 class="text-black text-xl font-extralight">Node.js</h3>
           </div>
-          <p class="text-xs font-bold text-left pl-7">Experienced</p>
+          <p class="text-xs font-bold text-left pl-7">Experiente</p>
           <div class="flex pl-7 items-center gap-3">
             <span><i class="text-black bi bi-bookmark-check-fill"></i></span>
             <h3 class="text-black text-xl font-extralight">Express.js</h3>
           </div>
-          <p class="text-xs font-bold text-left pl-7">Experienced</p>
+          <p class="text-xs font-bold text-left pl-7">Experiente</p>
           <div class="flex pl-7 items-center gap-3">
             <span><i class="text-black bi bi-bookmark-check-fill"></i></span>
             <h3 class="text-black text-xl font-extralight">TypeScript</h3>
           </div>
-          <p class="text-xs font-bold text-left pl-7">Intermediate</p>
+          <p class="text-xs font-bold text-left pl-7">Intermediário</p>
           <div class="flex pl-7 items-center gap-3">
             <span><i class="text-black bi bi-bookmark-check-fill"></i></span>
-            <h3 class="text-black text-xl font-extralight">
-              JWT Authentication
-            </h3>
+            <h3 class="text-black text-xl font-extralight">JWT Authentication</h3>
           </div>
-          <p class="text-xs font-bold text-left pl-7">Experienced</p>
+          <p class="text-xs font-bold text-left pl-7">Experiente</p>
           <div class="flex pl-7 items-center gap-3">
             <span><i class="text-black bi bi-bookmark-check-fill"></i></span>
-            <h3 class="text-black text-xl font-extralight">
-              MongoDB & Mongoose
-            </h3>
+            <h3 class="text-black text-xl font-extralight">MongoDB & Mongoose</h3>
           </div>
-          <p class="text-xs font-bold text-left pl-7">Experienced</p>
+          <p class="text-xs font-bold text-left pl-7">Experiente</p>
           <div class="flex pl-7 items-center gap-3">
             <span><i class="text-black bi bi-bookmark-check-fill"></i></span>
-            <h3 class="text-black text-xl font-extralight">
-              MySQL & Sequelize
-            </h3>
+            <h3 class="text-black text-xl font-extralight">MySQL & Sequelize</h3>
           </div>
-          <p class="text-xs font-bold text-left pl-7">Experienced</p>
+          <p class="text-xs font-bold text-left pl-7">Experiente</p>
           <div class="flex pl-7 items-center gap-3">
             <span><i class="text-black bi bi-bookmark-check-fill"></i></span>
             <h3 class="text-black text-xl font-extralight">PostgreSQL</h3>
           </div>
-          <p class="text-xs font-bold text-left pl-7">Intermediate</p>
+          <p class="text-xs font-bold text-left pl-7">Intermediário</p>
           <div class="flex pl-7 items-center gap-3">
             <span><i class="text-black bi bi-bookmark-check-fill"></i></span>
             <h3 class="text-black text-xl font-extralight">NestJS</h3>
           </div>
-          <p class="text-xs font-bold text-left pl-7">Basic</p>
+          <p class="text-xs font-bold text-left pl-7">Básico</p>
           <div class="flex pl-7 items-center gap-3">
             <span><i class="text-black bi bi-bookmark-check-fill"></i></span>
             <h3 class="text-black text-xl font-extralight">Security</h3>
           </div>
-          <p class="text-xs font-bold text-left pl-7">Learning</p>
+          <p class="text-xs font-bold text-left pl-7">Intermediário</p>
         </div>
       </div>
     </section>
 
+    <!-- TODO: Use <section id="projects"> em vez de <div>, envolva cada projeto individual em um <article>, use <h2> ou <h3> com significado claro dentro dos projetos. -->
+
     <section id="projects" class="text-center my-16 text-zinc-600">
-      <p>Browse My Recent</p>
-      <h1 class="font-medium text-4xl text-black py-3">Projects</h1>
+      <p>Navegue em meus</p>
+      <h1 class="font-medium text-4xl text-black py-3">Projetos</h1>
       <div class="lg:flex justify-center">
-        <div
-          class="border border-zinc-300 my-3 py-1 rounded-2xl bg-zinc-50 lg:p-4"
-        >
+        <div class="border border-zinc-300 my-3 py-1 rounded-2xl bg-zinc-50 lg:p-4">
           <!-- ! Colocar um projeto fullstack aqui -->
           <div class="projects project__1"></div>
           <h2 class="text-2xl font-bold py-3">Project One</h2>
@@ -283,9 +247,7 @@
         </div>
       </div>
       <div class="lg:flex gap-12 justify-center md:w-full">
-        <div
-          class="border border-zinc-300 my-3 py-1 rounded-2xl bg-zinc-50 lg:p-4"
-        >
+        <div class="border border-zinc-300 my-3 py-1 rounded-2xl bg-zinc-50 lg:p-4">
           <!-- ! Colocar um projeto backend aqui -->
           <div class="projects project__2"></div>
           <h2 class="text-2xl font-bold py-3">Project Two</h2>
@@ -302,9 +264,7 @@
             Live Demo
           </button>
         </div>
-        <div
-          class="border border-zinc-300 my-3 py-1 rounded-2xl bg-zinc-50 lg:p-4"
-        >
+        <div class="border border-zinc-300 my-3 py-1 rounded-2xl bg-zinc-50 lg:p-4">
           <!-- ! Colocar um projeto frontend aqui -->
           <div class="projects project__3"></div>
           <h2 class="text-2xl font-bold py-3">Project Three</h2>
@@ -325,8 +285,8 @@
     </section>
 
     <section id="contact" class="text-center my-16 text-zinc-600">
-      <p>Get in Touch</p>
-      <h1 class="font-medium text-4xl text-black py-3">Contact Me</h1>
+      <p>Entre em contato</p>
+      <h1 class="font-medium text-4xl text-black py-3">Meu Contato</h1>
 
       <div class="border border-zinc-300 rounded-2xl p-6 bg-zinc-50">
         <nav class="items-center flex gap-3">
@@ -348,35 +308,29 @@
     <footer class="text-zinc-600 text-center">
       <ul class="py-6">
         <li>
-          <a
-            class="text-black font-medium text-xl border-b border-b-zinc-300 my-2"
-            href="#about"
-            >About</a
+          <a class="text-black font-medium text-xl border-b border-b-zinc-300 my-2" href="#about"
+            >Sobre mim</a
           >
         </li>
         <li>
           <a
             class="text-black font-medium text-xl border-b border-b-zinc-300 my-2"
             href="#experience"
-            >Experience</a
+            >Experiência</a
           >
         </li>
         <li>
-          <a
-            class="text-black font-medium text-xl border-b border-b-zinc-300 my-2"
-            href="#projects"
-            >Projects</a
+          <a class="text-black font-medium text-xl border-b border-b-zinc-300 my-2" href="#projects"
+            >Projetos</a
           >
         </li>
         <li>
-          <a
-            class="text-black font-medium text-xl border-b border-b-zinc-300 my-2"
-            href="#contact"
-            >Contact</a
+          <a class="text-black font-medium text-xl border-b border-b-zinc-300 my-2" href="#contact"
+            >Contato</a
           >
         </li>
       </ul>
-      <p>Copyright © 2025 Eduardo Souza. All Rights Reserved.</p>
+      <p>Copyright © 2025 Eduardo Souza. Todos os direitos reservados.</p>
     </footer>
   </body>
 </html>

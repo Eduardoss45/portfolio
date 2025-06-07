@@ -1,25 +1,22 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const navBarDesktop = document.getElementById("desktop");
-  const navBarMobile = document.getElementById("mobile");
-
+document.addEventListener('DOMContentLoaded', () => {
+  const navBarDesktop = document.getElementById('desktop');
+  const navBarMobile = document.getElementById('mobile');
   function toggleNavigation() {
-    console.log("Resolução atual: ", window.innerWidth);
+    console.log('Resolução atual: ', window.innerWidth);
     if (window.innerWidth <= 770) {
-      navBarDesktop.style.display = "none";
-      navBarMobile.style.display = "flex";
+      navBarDesktop.style.display = 'none';
+      navBarMobile.style.display = 'flex';
     } else {
-      navBarDesktop.style.display = "flex";
-      navBarMobile.style.display = "none";
+      navBarDesktop.style.display = 'flex';
+      navBarMobile.style.display = 'none';
     }
   }
-
   toggleNavigation();
-
-  window.addEventListener("resize", toggleNavigation);
+  window.addEventListener('resize', toggleNavigation);
 });
 
-document.addEventListener("alpine:init", () => {
-  Alpine.data("dropdown", () => ({
+document.addEventListener('alpine:init', () => {
+  Alpine.data('dropdown', () => ({
     open: false,
     toggle() {
       this.open = !this.open;
